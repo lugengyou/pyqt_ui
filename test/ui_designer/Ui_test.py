@@ -75,11 +75,17 @@ class Ui_MainWindow(object):
         self.label_show_p1.setObjectName("label_show_p1")
         self.verticalLayout_2.addWidget(self.label_show_p1)
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(160, 320, 571, 151))
+        self.textBrowser.setGeometry(QtCore.QRect(160, 370, 571, 101))
         self.textBrowser.setObjectName("textBrowser")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(620, 200, 80, 23))
         self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(170, 320, 80, 23))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.lineEdit_sendMessage = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_sendMessage.setGeometry(QtCore.QRect(260, 320, 461, 23))
+        self.lineEdit_sendMessage.setObjectName("lineEdit_sendMessage")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 947, 20))
@@ -90,14 +96,18 @@ class Ui_MainWindow(object):
         self.pushButton_connect.clicked.connect(MainWindow.connectServer) # type: ignore
         self.pushButton.clicked.connect(MainWindow.slot_showImage) # type: ignore
         self.pushButton_2.clicked.connect(MainWindow.slot_clearShow) # type: ignore
+        self.pushButton_3.clicked.connect(MainWindow.slot_sendMessage) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.lineEdit_ip.setText(_translate("MainWindow", "172.168.3.70"))
+        self.lineEdit_port.setText(_translate("MainWindow", "6661"))
         self.pushButton_connect.setText(_translate("MainWindow", "connect"))
         self.comboBox.setItemText(0, _translate("MainWindow", "s1"))
         self.comboBox.setItemText(1, _translate("MainWindow", "s2"))
         self.comboBox.setItemText(2, _translate("MainWindow", "s3"))
         self.pushButton.setText(_translate("MainWindow", "show"))
         self.pushButton_2.setText(_translate("MainWindow", "clear"))
+        self.pushButton_3.setText(_translate("MainWindow", "send"))

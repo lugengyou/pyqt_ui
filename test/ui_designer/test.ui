@@ -31,10 +31,18 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLineEdit" name="lineEdit_ip"/>
+      <widget class="QLineEdit" name="lineEdit_ip">
+       <property name="text">
+        <string>172.168.3.70</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_port"/>
+      <widget class="QLineEdit" name="lineEdit_port">
+       <property name="text">
+        <string>6661</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_connect">
@@ -161,9 +169,9 @@
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>320</y>
+      <y>370</y>
       <width>571</width>
-      <height>151</height>
+      <height>101</height>
      </rect>
     </property>
    </widget>
@@ -178,6 +186,29 @@
     </property>
     <property name="text">
      <string>clear</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>320</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>send</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_sendMessage">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>320</y>
+      <width>461</width>
+      <height>23</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -242,13 +273,31 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slot_sendMessage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>signal_connectServer()</signal>
   <signal>signal_showImage()</signal>
-  <signal>signalclearShow()</signal>
+  <signal>signal_clearShow()</signal>
+  <signal>signal_sendMessage()</signal>
   <slot>connectServer()</slot>
   <slot>slot_showImage()</slot>
   <slot>slot_clearShow()</slot>
+  <slot>slot_sendMessage()</slot>
  </slots>
 </ui>
