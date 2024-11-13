@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1294</width>
-    <height>806</height>
+    <width>1290</width>
+    <height>826</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1076,15 +1076,75 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
-           <widget class="QLabel" name="label_output">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
             </property>
-            <property name="text">
-             <string>OUTPUT</string>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_output">
+               <property name="maximumSize">
+                <size>
+                 <width>60</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>OUTPUT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Clear</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_7">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
@@ -1103,7 +1163,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1294</width>
+     <width>1290</width>
      <height>20</height>
     </rect>
    </property>
@@ -1132,15 +1192,15 @@
    <sender>pushButton_clear</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>slot_sclearInput()</slot>
+   <slot>slot_clearInput()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>230</x>
-     <y>677</y>
+     <y>691</y>
     </hint>
     <hint type="destinationlabel">
-     <x>410</x>
-     <y>710</y>
+     <x>246</x>
+     <y>787</y>
     </hint>
    </hints>
   </connection>
@@ -1171,8 +1231,24 @@
      <y>135</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1289</x>
+     <x>1271</x>
      <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slot_clearOutput()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>440</x>
+     <y>780</y>
     </hint>
    </hints>
   </connection>
@@ -1182,9 +1258,11 @@
   <signal>signal_clearInput()</signal>
   <signal>signal_search()</signal>
   <signal>signal_display()</signal>
+  <signal>signal_clearOutput()</signal>
   <slot>slot_connectServer()</slot>
-  <slot>slot_sclearInput()</slot>
+  <slot>slot_clearInput()</slot>
   <slot>slot_search()</slot>
   <slot>slot_display()</slot>
+  <slot>slot_clearOutput()</slot>
  </slots>
 </ui>

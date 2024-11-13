@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/userdata/PyQt/test/ui_designer/tbps.ui'
+# Form implementation generated from reading ui file '/userdata/PyQt/tbps_ui/ui_designer/tbps.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1294, 806)
+        MainWindow.resize(1290, 826)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -503,12 +503,35 @@ class Ui_MainWindow(object):
         self.frame_debug.setObjectName("frame_debug")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_debug)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.label_output = QtWidgets.QLabel(self.frame_debug)
+        self.frame_5 = QtWidgets.QFrame(self.frame_debug)
+        self.frame_5.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.label_output = QtWidgets.QLabel(self.frame_5)
+        self.label_output.setMaximumSize(QtCore.QSize(60, 16777215))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_output.setFont(font)
         self.label_output.setObjectName("label_output")
-        self.verticalLayout_4.addWidget(self.label_output)
+        self.horizontalLayout_5.addWidget(self.label_output)
+        self.pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.pushButton.setMaximumSize(QtCore.QSize(80, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout_5.addWidget(self.pushButton)
+        self.frame_7 = QtWidgets.QFrame(self.frame_5)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.horizontalLayout_5.addWidget(self.frame_7)
+        self.verticalLayout_4.addWidget(self.frame_5)
         self.textBrowser_output = QtWidgets.QTextBrowser(self.frame_debug)
         self.textBrowser_output.setObjectName("textBrowser_output")
         self.verticalLayout_4.addWidget(self.textBrowser_output)
@@ -516,7 +539,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.frame_output, 0, 1, 2, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1294, 20))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1290, 20))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -525,9 +548,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.pushButton_connect.clicked.connect(MainWindow.slot_connectServer) # type: ignore
-        self.pushButton_clear.clicked.connect(MainWindow.slot_sclearInput) # type: ignore
+        self.pushButton_clear.clicked.connect(MainWindow.slot_clearInput) # type: ignore
         self.pushButton_search.clicked.connect(MainWindow.slot_search) # type: ignore
         self.comboBox_display.activated['QString'].connect(MainWindow.slot_display) # type: ignore
+        self.pushButton.clicked.connect(MainWindow.slot_clearOutput) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -572,3 +596,4 @@ class Ui_MainWindow(object):
         self.label_id10.setText(_translate("MainWindow", "id:"))
         self.label_p10.setText(_translate("MainWindow", "probability:"))
         self.label_output.setText(_translate("MainWindow", "OUTPUT"))
+        self.pushButton.setText(_translate("MainWindow", "Clear"))
