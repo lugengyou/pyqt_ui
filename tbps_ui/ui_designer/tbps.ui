@@ -411,7 +411,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -733,7 +733,7 @@
                 <item>
                  <widget class="QLabel" name="label_p2">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -788,7 +788,7 @@
                 <item>
                  <widget class="QLabel" name="label_p3">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -843,7 +843,7 @@
                 <item>
                  <widget class="QLabel" name="label_p4">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -902,7 +902,7 @@
                 <item>
                  <widget class="QLabel" name="label_p5">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -995,7 +995,7 @@
                 <item>
                  <widget class="QLabel" name="label_p6">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -1050,7 +1050,7 @@
                 <item>
                  <widget class="QLabel" name="label_p7">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -1105,7 +1105,7 @@
                 <item>
                  <widget class="QLabel" name="label_p8">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -1160,7 +1160,7 @@
                 <item>
                  <widget class="QLabel" name="label_p9">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
@@ -1215,7 +1215,7 @@
                 <item>
                  <widget class="QLabel" name="label_p10">
                   <property name="text">
-                   <string>probability:</string>
+                   <string>similarity:</string>
                   </property>
                  </widget>
                 </item>
