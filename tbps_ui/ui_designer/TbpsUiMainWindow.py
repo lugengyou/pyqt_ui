@@ -2,7 +2,7 @@
 Author: gengyou.lu 1770591868@qq.com
 Date: 2024-11-12 10:37:08
 FilePath: /tbps_ui/ui_designer/TbpsUiMainWindow.py
-LastEditTime: 2024-11-21 14:28:38
+LastEditTime: 2024-11-25 17:38:10
 Description: tbps ui 
 '''
 import os
@@ -87,7 +87,14 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
             self.displayResultSample(10, display_history)
         else:
             self.textBrowser_output.append("clear display scene.")
-            
+
+    def closeEvent(self, event):
+        self.release_resources()
+        event.accept()  # 接受关闭事件
+
+    def release_resources(self):
+        print("Release resources")
+
     # ************************ utils functions ************************ #
     def clearDisplayScene(self): 
         # 清空显示                         
