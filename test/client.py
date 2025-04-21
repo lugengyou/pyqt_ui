@@ -1,6 +1,15 @@
+'''
+Author: Lugy
+Date: 2025-04-21 09:48:18
+LastEditTime: 2025-04-21 10:00:58
+LastEditors: Lugy
+Description: 
+版权声明
+'''
 import socket
 import os
 import shutil
+
 
 def receive_images_from_server(server_host, server_port, save_folder):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
